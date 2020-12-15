@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=61.2.0", "wheel", "setuptools_scm[toml]>=3.4.3"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "PreImgAugment"
+readme = "ReadMe.md"
+description = "a library of predefined image augmentation pipelines."
+authors = [{name = "KOLANICH"}]
+license = {text = "Unlicense"}
+classifiers = [
+	"Development Status :: 4 - Beta",
+	"Environment :: Other Environment",
+	"Intended Audience :: Developers",
+	"License :: Public Domain",
+	"Operating System :: OS Independent",
+	"Programming Language :: Python",
+	"Programming Language :: Python :: 3",
+	"Programming Language :: Python :: 3 :: Only",
+	"Topic :: Software Development :: Libraries :: Python Modules",
+]
+keywords = ["PreImgAugment"]
+requires-python = ">=3.4"
+dependencies = [
+	"imgaug",
+	"mujson",
+	"numpy",
+	"scipy",
+	"imageio",
+	"Pillow",
+	#"StatsUtils", # @ git+https://codeberg.org/KOLANICH-libs/StatsUtils.py.git
+]
+dynamic = ["version"]
+
+[project.urls]
+Homepage = "https://codeberg.org/KOLANICH-ML/PreImgAugment.py"
+
+[tool.setuptools]
+zip-safe = true
+include-package-data = true
+
+[tool.setuptools.packages]
+find = {namespaces = false}
+
+[tool.setuptools_scm]
